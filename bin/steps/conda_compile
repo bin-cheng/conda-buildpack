@@ -4,7 +4,7 @@ if [ ! -d /app/.heroku/miniconda ]; then
     bash Miniconda-latest-Linux-x86_64.sh  -p /app/.heroku/miniconda/ -b | indent
     rm -fr Miniconda-latest-Linux-x86_64.sh
 
-    conda install pip=9.0.1-py27_1 --yes | indent
+    conda install pip --yes | indent
 fi
 
 echo "nomkl" > $HOME/.heroku/miniconda/conda-meta/pinned
@@ -19,7 +19,7 @@ fi
 
 if [ -f requirements.txt ]; then
     puts-step "Installing dependencies using Pip"
-    pip install -r requirements.txt  --exists-action=w --allow-all-external | indent
+    pip install -r requirements.txt  --exists-action=w | indent
 fi
 
 # Clean up the installation environment .
