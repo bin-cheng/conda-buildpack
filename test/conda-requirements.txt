@@ -3,4 +3,5 @@ numpy
 bitarray
 reportlab
 pandas
-pip=9.0.1-py27_1
+pip
+

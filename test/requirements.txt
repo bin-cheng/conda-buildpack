@@ -1,3 +1,5 @@
 requests
 httpbin
 gunicorn
+quandl
+bokeh
